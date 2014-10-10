@@ -1,0 +1,8 @@
+var gulp = require('gulp');
+var handlebars = require('gulp-compile-handlebars');
+
+gulp.task('handlebars', function() {
+	return gulp.src('src/*.html')
+		.pipe(handlebars(templateData, options))
+		.pipe(gulp.dest('dist'));
+})
